@@ -104,7 +104,7 @@ function render() {
   $("#installSlot").innerHTML = list.map((k) => {
     const t = TOOLS[k];
     return `<div class="tool-block"><div class="tool-h"><b>${t.name}</b><span class="muted">${t.maker} · ${t.who}</span></div>${cmdBox(t.install)}</div>`;
-  }).join("") + (tool ? "" : `<p class="note">위 구독 고르기에서 하나를 누르면 내 도구만 남습니다.</p>`);
+  }).join("");
   // STEP 4 확인
   $("#whereSlot").innerHTML = list.map((k) => cmdBox(`where ${TOOLS[k].run}`)).join("") + cmdBox("where node");
   $("#pathSlot").textContent = list.map((k) => TOOLS[k].exe).concat(NODE.exe).join("\n");
@@ -136,7 +136,6 @@ function choose(k) {
 }
 $$(".opt, .pick").forEach((b) => b.addEventListener("click", () => {
   choose(b.dataset.tool);
-  if (b.classList.contains("pick")) toast(`${TOOLS[b.dataset.tool].name}로 골랐어요`);
 }));
 document.addEventListener("click", (e) => { if (e.target.id === "showAll") choose(null); });
 
