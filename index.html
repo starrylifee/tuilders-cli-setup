@@ -35,7 +35,7 @@
 
 <nav class="tabs" role="tablist" aria-label="설치 단계">
   <button role="tab" data-tab="intro">준비물</button>
-  <button role="tab" data-tab="s1"><b>1</b> 관리자 cmd</button>
+  <button role="tab" data-tab="s1"><b>1</b> cmd 열기</button>
   <button role="tab" data-tab="s2"><b>2</b> Node.js</button>
   <button role="tab" data-tab="s3"><b>3</b> 도구 설치</button>
   <button role="tab" data-tab="s4"><b>4</b> PATH 확인</button>
@@ -58,11 +58,12 @@
           <button class="tr pick" data-tool="agy"><span><b>Google AI Pro·Ultra 구독 중</b></span><span class="tool mono">agy</span><span>Google</span><span class="muted">Antigravity CLI의 명령어 이름</span></button>
         </div>
         <p class="note">구독이 여러 개면 편한 것 하나, 구독이 없다면 개인 Google 계정으로 로그인하는 agy를 고르세요. 실습용 <b>Node.js는 모두</b> 설치합니다(STEP 2).</p>
+        <p class="note"><b>윈도우 노트북 기준</b>입니다. 크롬북은 이번 연수에서 다루지 않습니다.</p>
       </div>
       <img class="char" src="assets/char-cover.webp" alt="" width="300" height="320">
     </div>
     <div class="flow">
-      <button class="flow-card" data-go="s1"><span class="step">STEP 1</span><span>관리자 cmd 열기</span></button>
+      <button class="flow-card" data-go="s1"><span class="step">STEP 1</span><span>cmd 열기</span></button>
       <button class="flow-card" data-go="s2"><span class="step">STEP 2</span><span>Node.js 설치</span></button>
       <button class="flow-card" data-go="s3"><span class="step">STEP 3</span><span>도구 하나 설치</span></button>
       <button class="flow-card" data-go="s4"><span class="step">STEP 4</span><span>PATH 확인</span></button>
@@ -72,24 +73,22 @@
 
   <!-- STEP 1 -->
   <section class="panel" role="tabpanel" id="s1">
-    <h2><span class="badge">STEP 1</span>명령 프롬프트(cmd)를 관리자 권한으로 열기</h2>
+    <h2><span class="badge">STEP 1</span>명령 프롬프트(cmd) 열기</h2>
     <div class="split even">
       <figure class="shot">
         <div class="shot-wrap">
-          <img src="assets/startmenu.webp" alt="윈도우 시작 메뉴에서 cmd를 검색한 화면. 오른쪽에 관리자 권한으로 실행 메뉴가 있다." width="1244" height="706">
+          <img src="assets/startmenu.webp" alt="윈도우 시작 메뉴에서 cmd를 검색한 화면. 오른쪽 메뉴의 열기를 누른다." width="1244" height="706">
           <span class="shot-mark" aria-hidden="true"></span>
         </div>
-        <figcaption>시작 메뉴에서 cmd 검색</figcaption>
+        <figcaption>시작 메뉴에서 cmd 검색 → 열기</figcaption>
       </figure>
       <div>
         <ol class="steps">
           <li>작업 표시줄 <b>시작(⊞)</b>을 누르고 <code>cmd</code> 입력</li>
-          <li>오른쪽 <b class="red">관리자 권한으로 실행</b> 클릭</li>
-          <li>사용자 계정 컨트롤 창에서 <b>예</b></li>
-          <li>창 제목에 <b>관리자: 명령 프롬프트</b> 확인</li>
+          <li><b>열기</b> 클릭 (또는 Enter)</li>
+          <li>창에 <code>C:\Users\내이름&gt;</code>이 보이면 준비 끝</li>
         </ol>
-        <p class="note">관리자 창은 <code>C:\Windows\System32</code>에서 시작합니다. 아래 명령으로 내 사용자 폴더로 먼저 옮기세요.</p>
-        <div class="cmd" data-cmd="cd %USERPROFILE%"></div>
+        <div class="warn red-warn"><b>관리자 권한으로 실행은 쓰지 마세요.</b> 관리자 창에서 설치하면 다른 계정 폴더에 깔려 평소 창에서 명령어를 못 찾을 수 있고, AI 에이전트가 시스템 파일까지 건드릴 권한을 갖게 됩니다. Node.js 설치 중 뜨는 권한 확인 창에만 ‘예’를 누르면 됩니다.</div>
       </div>
     </div>
   </section>
@@ -224,7 +223,7 @@
 </main>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<footer class="foot"><span class="prompt">&gt;_</span> Tuilders · 윈도우 10/11 기준 · 설치 명령은 2026-10-21 각 공식 문서 기준</footer>
+<footer class="foot"><span class="prompt">&gt;_</span> Tuilders · 윈도우 노트북 기준(크롬북 제외) · 설치 명령은 2026-10-21 각 공식 문서 기준</footer>
 <script src="app.js"></script>
 </body>
 </html>

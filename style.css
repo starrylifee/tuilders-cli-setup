@@ -134,7 +134,8 @@ h3 .muted { font-weight: 500; font-size: 16px; margin-left: 6px; }
 .shot { margin: 0; }
 .shot-wrap { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--lav2); box-shadow: var(--shadow); }
 .shot-wrap img { display: block; width: 100%; height: auto; }
-.shot-mark { position: absolute; left: 47.4%; top: 71.7%; width: 47.6%; height: 7.9%; border: 3px solid var(--red); border-radius: 8px; }
+.shot-mark { position: absolute; left: 47.4%; top: 65.3%; width: 47.6%; height: 7.1%; border: 3px solid var(--green-d); border-radius: 8px; }
+.red-warn { background: #fdecec; border-color: var(--red); margin-top: 14px; }
 .shot figcaption { text-align: center; color: var(--muted); font-size: 14px; margin-top: 6px; }
 
 .banner { margin: 18px 0 0; padding: 14px 20px; background: var(--navy); color: #fff; border: 1.5px solid var(--green); border-radius: 14px; text-align: center;
